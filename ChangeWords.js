@@ -27,7 +27,7 @@ function Algorithm(text) {
 }
 
 Submit.addEventListener('click', function (){
-if (OriginalText.value.length < 2) {
+if (OriginalText.value.length < 140) {
     ModificatedText.textContent = Algorithm(OriginalText.value);
 } else {
     ModificatedText.textContent = ErrorMessage;
