@@ -1,6 +1,7 @@
 let OriginalText = document.getElementById("original_text");
 let ModificatedText = document.getElementById("modificated_text");
 const Submit = document.getElementById("submit_button");
+const ScriptArea = document.getElementById("srcipt_area")
 
 const ErrorMessage = ModificatedText.textContent.slice(0,3) === "Con" ? "Max characters are 140" : "El máximo aceptado es de 140 caractéres";
 
@@ -29,6 +30,12 @@ function Algorithm(text) {
 Submit.addEventListener('click', function (){
 if (OriginalText.value.length < 140) {
     ModificatedText.textContent = Algorithm(OriginalText.value);
+    const HiddenText = OriginalText.value.slice();
+    OriginalText.value = "";
+    const ShowButton = document.getElementById("show_button");
+    ShowButton.addEventListener('click', function (){
+        OriginalText.value = HiddenText;
+    });
 } else {
     ModificatedText.textContent = ErrorMessage;
 }

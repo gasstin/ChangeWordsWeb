@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Our Brain</title>
@@ -11,7 +12,9 @@
     <a href="index.html" title="Español"><img src="svg/es.svg" alt="Spanish"></a>
 </nav>
 <body>
+    <div class="first_container">
     <div id="explicacion">
+            <h2 style="width: max-content;">Global Reading Method</h2>
         <p class="explicacion_p" id="explicacion_p">One of the peculiarities of the human brain is 
             that it can read a word even if all its letters are not in order, 
             as long as the first and last letter are in the correct position.
@@ -32,11 +35,16 @@
         <textarea name="original_text" id="original_text" cols="30" rows="10" placeholder="Insert text here"></textarea>
         <br>
         <button id="submit_button" type="submit" title="Enviar">Send</button>
+        <button id="show_button" type="submit" title="Show">Show</button>
     </div>
     <div>
         <p id="modificated_text">Converted text will appear here</p>
     </div>
     </div>    
     <script src="ChangeWords.js"></script>
+    </div>
+    <footer>
+    @ by Gasstin
+</footer>
 </body>
 </html>
